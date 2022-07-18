@@ -1,6 +1,7 @@
 $primary: #149dcc
 $secondary: #FFA928
 $text-color: #3A3A3C
+$bg-color: #edf2f7
 *
     box-sizing: border-box
     scroll-behavior: smooth
@@ -29,6 +30,12 @@ a
     line-height: 110%
     text-align: center
     letter-spacing: 0.05em
+    transform: translateX(-100px)
+    opacity: 0
+    transition: all 0.75s ease-in-out
+    &.anim-active
+        transform: translateX(0)
+        opacity: 1
 .text
     font-family: 'Montserrat'
     font-style: normal

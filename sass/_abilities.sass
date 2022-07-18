@@ -1,4 +1,5 @@
 .abilities
+    overflow: hidden
     &__list
         list-style: none
     &__item
@@ -6,6 +7,12 @@
         position: relative
         display: flex
         align-items: flex-start
+        transform: translateX(-100px)
+        opacity: 0
+        transition: all 0.75s ease-in-out
+        &.anim-active
+            transform: translateX(0)
+            opacity: 1
         & span
             position: absolute
             color: #edf2f7

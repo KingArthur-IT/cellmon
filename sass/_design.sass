@@ -1,0 +1,48 @@
+.design-item
+    position: absolute
+    z-index: -1
+    width: 150px
+    transition: all 0.75s ease-in-out
+    opacity: 0.9
+    // animation: 2s ease-in-out infinite alternate 3s rotate
+    //nimation: rotate 5s infinite ease-in-out
+
+.hexagon-1
+    top: 150px
+    left: 150px
+.hexagon-2
+    top: 250px
+    left: 400px
+.hexagon-3
+    top: 330px
+    left: 253px
+.hexagon-4
+    top: 600px
+    left: 600px
+.hexagon-5
+    top: 700px
+    left: 100px
+
+.anim-active.hexagon-1
+    top: 50px
+    left: 50px
+.anim-active.hexagon-2
+    top: 132px
+    left: 186px
+.anim-active.hexagon-3
+    top: 230px
+    left: 53px
+.anim-active.hexagon-4
+    top: 310px
+    left: 196px
+.anim-active.hexagon-5
+    top: 410px
+    left: 50px
+
+@keyframes rotate
+    0%
+        transform: rotate(0)
+    10%
+        transform: rotate(60deg)
+    90%
+        transform: rotate(0)
