@@ -1,0 +1,38 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__logo
+        &-wrapper
+            display: flex
+            align-items: center
+        &-img
+            width: 75px
+            height: 75px
+            margin-right: 5px
+        &-text
+            display: flex
+            flex-direction: column
+        &-title
+            font-family: 'Druk Cyr'
+            font-style: normal
+            font-weight: 500
+            font-size: 50px
+            color: $text-color
+            letter-spacing: 2.5px
+            line-height: 95%
+            & span
+                color: $primary
+        &-description
+            font-family: 'Montserrat'
+            font-style: normal
+            font-weight: 400
+            font-size: 11px
+            line-height: 100%
+    &__contacts-wrapper
+    &__contacts-tel
+        color: $primary
+        font-size: 22px
+        font-weight: 700
+        &:hover
+            color: $secondary

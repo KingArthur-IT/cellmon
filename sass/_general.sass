@@ -4,6 +4,12 @@ $text-color: #3A3A3C
 *
     box-sizing: border-box
     scroll-behavior: smooth
+p
+    margin: 0
+    padding: 0
+a
+    text-decoration: none
+    color: $text-color
 .body
     margin: 0
     padding: 0
@@ -19,7 +25,7 @@ $text-color: #3A3A3C
     font-family: 'Druk Cyr'
     font-style: normal
     font-weight: 700
-    font-size: 70px
+    font-size: 30px
     line-height: 110%
     text-align: center
     letter-spacing: 0.05em
@@ -27,8 +33,16 @@ $text-color: #3A3A3C
     font-family: 'Montserrat'
     font-style: normal
     font-weight: 400
-    font-size: 23px
+    font-size: 18px
     line-height: 120%
+    color: $text-color
+.link
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    color: $primary
+    &:hover
+        color: $secondary
 .button
     position: relative
     appearance: none
@@ -46,43 +60,11 @@ $text-color: #3A3A3C
     transition: all 0.3s ease-in-out
     z-index: 5
     overflow: hidden
-.gray-button
-    border-radius: 70px
-    padding: 20px 22px
-    width: 160px
-    background: linear-gradient(359.95deg, #C0C0C0 0.05%, #EBEBEB 99.95%)
-    box-shadow: 0px 6.13639px 16.3637px rgba(255, 255, 255, 0.7), inset 0px 2.72729px 7.50004px 3.40911px rgba(255, 255, 255, 0.4)
-    font-size: 9px
-    color: $text-color
-    transition: all 0.5s ease-in-out
-    &::after
-        content: ''
-        position: absolute
-        top: 0
-        bottom: 0
-        left: 0
-        right: 0
-        background: linear-gradient(359.95deg, #A6A6A6 0.05%, #D1D1D1 99.95%)
-        opacity: 0
-        z-index: -1
-        transition: all 0.3s ease-in-out
-    &:hover
-        //background: linear-gradient(359.95deg, #A6A6A6 0.05%, #D1D1D1 99.95%)
-        box-shadow: 0px 6.13639px 16.3637px rgba(255, 255, 255, 0.7), inset 0px 2.72729px 7.50004px 3.40911px rgba(255, 255, 255, 0.4)
-        &::after
-            opacity: 1
-    &:active
-        box-shadow: inset 0px 4px 5px rgba(0, 0, 0, 0.25)
-        background: linear-gradient(359.95deg, #A6A6A6 0.05%, #D1D1D1 99.95%)
 .primary-button
     text-transform: uppercase
     padding: 27px 44px
     width: 315px
-    background: -webkit-linear-gradient(359.95deg, #E08600 0.05%, #FCB347 99.95%)
-    background: -moz-linear-gradient(359.95deg, #E08600 0.05%, #FCB347 99.95%)
-    background: -o-linear-gradient(359.95deg, #E08600 0.05%, #FCB347 99.95%)
-    background: linear-gradient(359.95deg, #E08600 0.05%, #FCB347 99.95%)
-    box-shadow: 0px 13.2316px 26px rgba(233, 133, 8, 0.5), inset 0px 5.88071px 16.172px 7.35089px rgba(255, 255, 255, 0.4)
+    background: $primary
     border-radius: 150px
     font-size: 15px
     color: #fff
