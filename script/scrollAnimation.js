@@ -3,6 +3,13 @@ const animItems = document.querySelectorAll('.anim-item');
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll() {
+        //mewnu fixed
+        const isMenuFixed = document.getElementById('header-nav').classList.contains('fixed');
+        if (window.pageYOffset > 70 && !isMenuFixed)
+            document.getElementById('header-nav').classList.add('fixed');
+        if (window.pageYOffset <= 70 && isMenuFixed)
+            document.getElementById('header-nav').classList.remove('fixed');
+        //animations
         for (let index = 0; index < animItems.length; index++) {
             const item = animItems[index];
             const animItemHeight = item.offsetHeight;

@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="container">
-        <div class="header">
+    <header id="header-nav">
+        <div class="header container">
             <a href="/">
                 <div class="header__logo-wrapper">
                     <img src="./assets/logo.png" alt="CM" class="header__logo-img">
@@ -25,11 +25,27 @@
                     </div>
                 </div>
             </a>
+            <nav class="nav-menu fixed-menu">
+                <ul class="nav-menu__list">
+                    <li class="px-20 nav-menu__item">
+                        <a class="link" href="#">IP-телефония</a>
+                    </li>
+                    <li class="px-20 nav-menu__item">
+                        <a class="link" href="#">Видеонаблюдение</a>
+                    </li>
+                    <li class="px-20 nav-menu__item">
+                        <a class="link" href="#">Клиенты</a>
+                    </li>
+                    <li class="px-20 nav-menu__item">
+                        <a class="link" href="#">Блог</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="header__contacts-wrapper">
                 <a class="header__contacts-tel" href="tel:+7(3652)88-55-55">+7 (3652) 88-55-55</a>
             </div>
         </div>
-        <nav class="nav-menu">
+        <nav class="container nav-menu">
             <ul class="nav-menu__list">
                 <li class="nav-menu__item">
                     <a class="link" href="#">IP-телефония</a>

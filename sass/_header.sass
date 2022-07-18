@@ -1,7 +1,11 @@
+#header-nav
+    transition: all 0.5s ease-in-out
+    background-color: #fff
 .header
     display: flex
     justify-content: space-between
     align-items: center
+    padding-top: 5px
     &__logo
         &-wrapper
             display: flex
@@ -10,6 +14,7 @@
             width: 75px
             height: 75px
             margin-right: 5px
+            transition: all 0.5s ease-in-out
         &-text
             display: flex
             flex-direction: column
@@ -21,6 +26,7 @@
             color: $text-color
             letter-spacing: 2.5px
             line-height: 95%
+            transition: all 0.5s ease-in-out
             & span
                 color: $primary
         &-description
@@ -29,10 +35,37 @@
             font-weight: 400
             font-size: 11px
             line-height: 100%
+            transition: all 0.5s ease-in-out
     &__contacts-wrapper
     &__contacts-tel
         color: $primary
         font-size: 22px
         font-weight: 700
+        transition: all 0.5s ease-in-out
         &:hover
             color: $secondary
+.px-20
+    padding: 0 20px
+
+.fixed-menu
+    display: none
+.fixed
+    position: fixed
+    background-color: #fff
+    width: 100%
+    top: 0
+    padding: 15px 0
+    z-index: 10
+    & .nav-menu
+        display: none
+    & .fixed-menu
+        display: flex
+    & .header__logo-img
+        width: 40px
+        height: 40px
+    & .header__logo-title
+        font-size: 30px
+    & .header__logo-description
+        font-size: 10px
+    & .header__contacts-tel
+        font-size: 16px
