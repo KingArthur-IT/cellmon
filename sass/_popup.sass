@@ -1,0 +1,21 @@
+.popup
+    position: fixed
+    height: 100vh
+    width: 100%
+    background: rgba(108, 108, 108, 0.8)
+    top: 0
+    z-index: 15
+    display: flex
+    justify-content: center
+    align-items: center
+    display: none
+    opacity: 0
+    transition: opacity 0.3s ease-in-out
+.popup-visible
+    opacity: 1 !important
+.popup-show
+    display: flex !important
+
+@media screen and (max-width: 460px)
+    .popup
+        width: auto
