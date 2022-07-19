@@ -1,0 +1,58 @@
+.portfolio
+    &__title
+        margin-bottom: 40px
+    &__item
+        display: flex
+        justify-content: space-between
+        margin-bottom: 60px
+        & img
+            max-width: 250px
+            height: 100px
+            flex-basis: 20%
+    &__hero
+        flex-basis: 75%
+    &__item-title
+        font-weight: bold
+        margin: 0
+        margin-bottom: 5px
+    &__city
+        margin-bottom: 15px
+
+@media screen and (max-width: 1100px)
+    .portfolio
+        &__item
+            & img
+                max-width: 200px
+                height: 100px
+                flex-basis: 20%
+@media screen and (max-width: 900px)
+    .portfolio
+        &__item
+            flex-direction: column
+            & img
+                max-width: 250px
+                margin: auto
+                margin-bottom: 10px
+        &__hero
+            max-width: 600px
+            margin: auto
+            text-align: justify
+        &__item-title
+            text-align: center
+        &__city
+            text-align: center
+@media screen and (max-width: 400px)
+    .portfolio
+        &__item
+            margin-bottom: 20px
+            & img
+                max-width: 150px
+
+.fixed ~ .portfolio
+    margin-top: 150px
+@media screen and (max-width: 860px)
+    .fixed ~ .portfolio
+        margin-top: 70px
+@media screen and (max-width: 600px)
+    .fixed ~ .portfolio
+        margin-top: 60px
