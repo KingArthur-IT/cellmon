@@ -151,3 +151,22 @@ body
 @media screen and (max-width: 375px)
     .container
         padding: 0 10px
+
+.list
+    list-style: none
+    padding-left: 15px
+    &__item
+        margin-bottom: 5px
+        padding-left: 15px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            height: 2px
+            width: 15px
+            left: -15px
+            top: 9px
+            background-color: $secondary
+.my-20
+    margin-top: 20px
+    margin-bottom: 20px

@@ -8,7 +8,6 @@
     z-index: 8
     opacity: 0
     transform: translateY(-100%)
-    transition: all 0.75s ease-in-out
     display: flex
     justify-content: center
     align-items: center
@@ -39,6 +38,7 @@
     &.opened
         opacity: 1
         transform: translateY(0)
+        transition: all 0.75s ease-in-out
         &::before
             transform: scale(1)
         &::after

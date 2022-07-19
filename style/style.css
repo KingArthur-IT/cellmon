@@ -308,6 +308,32 @@ body {
   }
 }
 
+.list {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.list__item {
+  margin-bottom: 5px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.list__item::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  left: -15px;
+  top: 9px;
+  background-color: #FFA928;
+}
+
+.my-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #header-nav {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -1351,8 +1377,6 @@ body {
   opacity: 0;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: all 0.75s ease-in-out;
-  transition: all 0.75s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1404,6 +1428,8 @@ body {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 
 .burger-menu.opened::before {
