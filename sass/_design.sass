@@ -4,8 +4,6 @@
     width: 150px
     transition: all 0.75s ease-in-out
     opacity: 0
-    // animation: 2s ease-in-out infinite alternate 3s rotate
-    //nimation: rotate 5s infinite ease-in-out
 
 .hexagon-1
     top: 150px
@@ -82,15 +80,6 @@
     .design-item
         display: none
 
-@keyframes rotate
-    0%
-        transform: rotate(0)
-    10%
-        transform: rotate(60deg)
-    90%
-        transform: rotate(0)
-
-
 .hexagon-cctv-1
     top: 0
     left: 0
@@ -127,3 +116,42 @@
         display: none
     .anim-active.hexagon-cctv-3
         display: none
+
+.hexagon-burger-1
+    bottom: 500px
+    left: 500px
+    transition-delay: .5s
+.hexagon-burger-2
+    bottom: 500px
+    left: 500px
+    transition-delay: .5s
+.hexagon-burger-3
+    bottom: 500px
+    left: 500px
+    transition-delay: .5s
+.opened .hexagon-burger-1
+    top: auto
+    bottom: 100px
+    left: 30px
+    right: auto
+    opacity: 0.8
+.opened .hexagon-burger-2
+    top: auto
+    bottom: 40px
+    left: 120px
+    right: auto
+    opacity: 0.8
+.opened .hexagon-burger-3
+    top: auto
+    bottom: 160px
+    left: 120px
+    right: auto
+    opacity: 0.8
+
+@media screen and (max-width: 768px)
+    .opened .hexagon-burger-2
+        bottom: 70px
+        left: 75px
+    .opened .hexagon-burger-3
+        bottom: 130px
+        left: 75px
