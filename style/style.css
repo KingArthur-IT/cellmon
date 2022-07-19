@@ -74,10 +74,10 @@ body {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: -webkit-transform 0.75s ease-in-out;
-  transition: -webkit-transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
 }
 
 .title.anim-active {
@@ -1843,8 +1843,61 @@ body {
   }
 }
 
+.portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: #edf2f7;
+  top: -100px;
+  right: -100px;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.0s ease-in-out;
+  transition: -webkit-transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out, -webkit-transform 1.0s ease-in-out;
+}
+
+.portfolio::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #edf2f7;
+  top: 300px;
+  right: 250px;
+  z-index: -2;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.5s ease-in-out;
+  transition: -webkit-transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out, -webkit-transform 1.5s ease-in-out;
+}
+
+.portfolio.anim-active::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.portfolio.anim-active::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .portfolio__title {
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 40px;
 }
 
 .portfolio__item {
@@ -1855,6 +1908,19 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 60px;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
+  -webkit-transition: opacity 1.0s ease-in-out, -webkit-transform 1.0s ease-in-out;
+  transition: opacity 1.0s ease-in-out, -webkit-transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out, opacity 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out, opacity 1.0s ease-in-out, -webkit-transform 1.0s ease-in-out;
+}
+
+.portfolio__item.anim-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .portfolio__item img {
@@ -1935,5 +2001,17 @@ body {
 @media screen and (max-width: 600px) {
   .fixed ~ .portfolio {
     margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .portfolio__title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio__title {
+    font-size: 28px;
   }
 }

@@ -1,10 +1,49 @@
 .portfolio
+    position: relative
+    overflow: hidden
+    &::before
+        content: ''
+        position: absolute
+        width: 400px
+        height: 400px
+        border-radius: 50%
+        background: $bg-color
+        top: -100px
+        right: -100px
+        z-index: -1
+        transform: scale(0)
+        transition: transform 1.0s ease-in-out
+    &::after
+        content: ''
+        position: absolute
+        width: 250px
+        height: 250px
+        border-radius: 50%
+        background: $bg-color
+        top: 300px
+        right: 250px
+        z-index: -2
+        transform: scale(0)
+        transition: transform 1.5s ease-in-out
+    &.anim-active
+        &::before
+            transform: scale(1)
+        &::after
+            transform: scale(1)
     &__title
-        margin-bottom: 40px
+        margin-top: 60px
+        margin-bottom: 60px
+        font-size: 40px
     &__item
         display: flex
         justify-content: space-between
         margin-bottom: 60px
+        transform: translateX(-200px)
+        opacity: 0
+        transition: transform 1.0s ease-in-out, opacity 1.0s ease-in-out
+        &.anim-active
+            transform: translateX(0)
+            opacity: 1
         & img
             max-width: 250px
             height: 100px
@@ -56,3 +95,10 @@
 @media screen and (max-width: 600px)
     .fixed ~ .portfolio
         margin-top: 60px
+
+@media screen and (max-width: 860px)
+    .portfolio__title
+        font-size: 30px
+@media screen and (max-width: 600px)
+    .portfolio__title
+        font-size: 28px
