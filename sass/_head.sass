@@ -1,3 +1,5 @@
+.fixed ~ .head
+    margin-top: 125px
 .head
     background: url('../assets/water.jpg') center no-repeat
     background-size: cover
@@ -44,6 +46,8 @@
     .head
         &__title
             font-size: 65px
+    .fixed ~ .head
+        margin-top: 70px
 @media screen and (max-width: 700px)
     .head
         &__item
@@ -61,6 +65,8 @@
         &__item
             margin-bottom: 10px
             margin-right: 0 !important
+    .fixed ~ .head
+        margin-top: 60px
 @media screen and (max-width: 375px)
     .head
         min-height: 200px

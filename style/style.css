@@ -74,8 +74,10 @@ body {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: all 0.75s ease-in-out;
-  transition: all 0.75s ease-in-out;
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
 }
 
 .title.anim-active {
@@ -338,8 +340,6 @@ body {
   width: 75px;
   height: 75px;
   margin-right: 5px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .header__logo-text {
@@ -360,8 +360,6 @@ body {
   color: #3A3A3C;
   letter-spacing: 2.5px;
   line-height: 95%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .header__logo-title span {
@@ -374,8 +372,6 @@ body {
   font-weight: 400;
   font-size: 11px;
   line-height: 100%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .header__contacts-wrapper {
@@ -391,8 +387,6 @@ body {
   color: #149dcc;
   font-size: 22px;
   font-weight: 700;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .header__contacts-tel:hover {
@@ -538,6 +532,10 @@ body {
   }
 }
 
+.fixed ~ .head {
+  margin-top: 125px;
+}
+
 .head {
   background: url("../assets/water.jpg") center no-repeat;
   background-size: cover;
@@ -612,6 +610,9 @@ body {
   .head__title {
     font-size: 65px;
   }
+  .fixed ~ .head {
+    margin-top: 70px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -638,6 +639,9 @@ body {
   .head__item {
     margin-bottom: 10px;
     margin-right: 0 !important;
+  }
+  .fixed ~ .head {
+    margin-top: 60px;
   }
 }
 
