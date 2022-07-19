@@ -2,6 +2,30 @@
     padding: 30px 0
     background-color: $bg-color
     position: relative
+    &::before
+        content: ''
+        position: absolute
+        width: 400px
+        height: 400px
+        border-radius: 50%
+        background: #fff
+        top: -100px
+        left: -100px
+        z-index: -1
+        transform: scale(0)
+        transition: transform 1.0s ease-in-out
+    &::after
+        content: ''
+        position: absolute
+        width: 250px
+        height: 250px
+        border-radius: 50%
+        background: #fff
+        top: 300px
+        left: 250px
+        z-index: -2
+        transform: scale(0)
+        transition: transform 1.5s ease-in-out
     &__list
         list-style: none
         width: 70%
@@ -27,14 +51,44 @@
             background-color: $secondary
         & span
             font-weight: bold
+.anim-active.voip
+    &::before
+        transform: scale(1)
+    &::after
+        transform: scale(1)
 
+
+@media screen and (max-width: 1024px)
+    .voip
+        &::before
+            width: 300px
+            height: 300px
+            top: -100px
+            left: -100px
+        &::after
+            width: 150px
+            height: 150px
+            top: 300px
+            left: 250px
 @media screen and (max-width: 768px)
     .voip
+        &::before
+            width: 200px
+            height: 200px
+            top: -50px
+            left: -50px
+        &::after
+            width: 100px
+            height: 100px
+            top: 200px
+            left: 110px
         &__list
             width: 80%
 @media screen and (max-width: 550px)
     .voip
         padding-top: 15px
+        &::after
+            display: none
         &__list
             width: 100%
             margin: auto

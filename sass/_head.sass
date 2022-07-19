@@ -10,11 +10,47 @@
         width: 80%
         margin: auto
         font-size: 80px
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        max-width: 650px
+        margin: auto
+        margin-top: 30px
+        transform: translateY(20px)
+        opacity: 0
+        transition: all 0.75s ease-in-out
+        &.anim-active
+            transform: translateY(0)
+            opacity: 1
+    &__item
+        background: rgba($primary, 0.2)
+        width: 300px
+        height: 40px
+        flex-basis: 40%
+        margin-bottom: 30px
+        border-radius: 50px
+        border: 2px solid $primary
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        &:hover
+            border: 2px solid $secondary
+            background: rgba($secondary, 0.2)
 
 @media screen and (max-width: 860px)
     .head
         &__title
             font-size: 65px
+@media screen and (max-width: 700px)
+    .head
+        &__item
+            width: 260px
+            margin-right: 20px
+        &__wrapper
+            justify-content: center
 @media screen and (max-width: 600px)
     .head
         padding-top: 60px
@@ -22,6 +58,9 @@
         &__title
             font-size: 40px
             width: 100%
+        &__item
+            margin-bottom: 10px
+            margin-right: 0 !important
 @media screen and (max-width: 375px)
     .head
         min-height: 200px

@@ -1,0 +1,62 @@
+.advantages
+    &__title
+        font-family: 'Druk Cyr'
+        font-style: normal
+        font-weight: 700
+        font-size: 30px
+        line-height: 110%
+        letter-spacing: 0.05em
+        transform: translateX(-100px)
+        opacity: 0
+        transition: all 0.75s ease-in-out
+        &.anim-active
+            transform: translateX(0)
+            opacity: 1
+    &__intro-text
+        transform: translateY(20px)
+        opacity: 0
+        transition: all 0.75s ease-in-out
+        &.anim-active
+            transform: translateY(0)
+            opacity: 1
+    &__list
+        list-style: none
+        padding: 0
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+    &__item
+        flex-basis: 31%
+        background-color: $bg-color
+        padding: 30px
+        margin-bottom: 30px
+        text-align: center
+        border-radius: 50px
+        min-height: 250px
+        transform: translateY(20px)
+        opacity: 0
+        transition: all 0.75s ease-in-out
+        &.anim-active
+            transform: translateY(0)
+            opacity: 1
+    &__img
+        width: 60px
+        height: 60px
+        margin-bottom: 15px
+    &__text
+
+@media screen and (max-width: 920px)
+    .advantages
+        &__item
+            flex-basis: 47%
+
+@media screen and (max-width: 768px)
+    .advantages
+        &__item
+            margin-bottom: 18px
+
+@media screen and (max-width: 600px)
+    .advantages
+        &__item
+            flex-basis: 100%
+            min-height: 200px
