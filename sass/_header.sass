@@ -5,7 +5,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding-top: 5px
+    padding-top: 10px
     &__logo
         &-wrapper
             display: flex
@@ -37,6 +37,8 @@
             line-height: 100%
             transition: all 0.5s ease-in-out
     &__contacts-wrapper
+        display: flex
+        align-items: center
     &__contacts-tel
         color: $primary
         font-size: 22px
@@ -44,6 +46,12 @@
         transition: all 0.5s ease-in-out
         &:hover
             color: $secondary
+    &__burger
+        display: none
+        margin-left: 20px
+        & svg
+            width: 19px
+            height: 19px
 .px-20
     padding: 0 20px
 
@@ -69,3 +77,57 @@
         font-size: 10px
     & .header__contacts-tel
         font-size: 16px
+
+@media screen and (max-width: 1024px)
+    .fixed
+        //padding: 0
+    .fixed-menu
+        display: none
+    .fixed .fixed-menu
+        display: none
+    .fixed .header__burger
+        display: block
+
+@media screen and (max-width: 860px)
+    .header
+        padding-bottom: 10px
+        &__logo
+            &-img
+                width: 50px
+                height: 50px
+            &-title
+                font-size: 38px
+            &-description
+                font-size: 10px
+        &__contacts-tel
+            display: none
+    .fixed
+        padding: 0
+    .fixed-menu
+        display: none
+    .fixed .fixed-menu
+        display: none
+    .header__burger
+        display: block
+
+@media screen and (max-width: 600px)
+    .header
+        &__logo
+            &-img
+                width: 40px
+                height: 40px
+            &-title
+                font-size: 32px
+            &-description
+                font-size: 9px
+
+@media screen and (max-width: 375px)
+    .header
+        &__logo
+            &-img
+                width: 35px
+                height: 35px
+            &-title
+                font-size: 24px
+            &-description
+                font-size: 7px

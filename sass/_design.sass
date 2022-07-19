@@ -3,7 +3,7 @@
     z-index: -1
     width: 150px
     transition: all 0.75s ease-in-out
-    opacity: 0.9
+    opacity: 0
     // animation: 2s ease-in-out infinite alternate 3s rotate
     //nimation: rotate 5s infinite ease-in-out
 
@@ -26,18 +26,61 @@
 .anim-active.hexagon-1
     top: 50px
     left: 50px
+    opacity: 0.9
 .anim-active.hexagon-2
     top: 132px
     left: 186px
+    opacity: 0.9
 .anim-active.hexagon-3
     top: 230px
     left: 53px
+    opacity: 0.9
 .anim-active.hexagon-4
     top: 310px
     left: 196px
+    opacity: 0.9
 .anim-active.hexagon-5
     top: 410px
     left: 50px
+    opacity: 0.9
+
+@media screen and (max-width: 1024px)
+    .design-item
+        width: 100px
+    .anim-active.hexagon-2
+        top: 100px
+        left: 140px
+    .anim-active.hexagon-3
+        top: 150px
+        left: 53px
+    .anim-active.hexagon-4
+        top: 200px
+        left: 140px
+    .anim-active.hexagon-5
+        top: 250px
+        left: 50px
+
+@media screen and (max-width: 768px)
+    .design-item
+        width: 50px
+    .anim-active.hexagon-1
+        top: 100px
+    .anim-active.hexagon-2
+        top: 130px
+        left: 95px
+    .anim-active.hexagon-3
+        top: 153px
+        left: 48px
+    .anim-active.hexagon-4
+        top: 182px
+        left: 92px
+    .anim-active.hexagon-5
+        top: 205px
+        left: 47px
+        
+@media screen and (max-width: 550px)
+    .design-item
+        display: none
 
 @keyframes rotate
     0%
