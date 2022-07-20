@@ -74,16 +74,16 @@ body {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
-  transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
 }
 
 .title.anim-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
+  -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
 }
 
 .text {
@@ -288,6 +288,43 @@ body {
   padding-bottom: 40px;
 }
 
+.m-auto {
+  margin: auto;
+  display: block;
+}
+
+.max-width-100 {
+  max-width: 100%;
+}
+
+.text-animation {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.text-animation.anim-active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: opacity .75s ease-in-out, -webkit-transform .75s ease-in-out;
+  transition: opacity .75s ease-in-out, -webkit-transform .75s ease-in-out;
+  transition: opacity .75s ease-in-out, transform .75s ease-in-out;
+  transition: opacity .75s ease-in-out, transform .75s ease-in-out, -webkit-transform .75s ease-in-out;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.bg-colored {
+  background: #edf2f7;
+}
+
+.text-dark {
+  color: #3A3A3C !important;
+}
+
 @media screen and (max-width: 860px) {
   .title {
     font-size: 24px;
@@ -353,6 +390,22 @@ body {
 @media screen and (max-width: 600px) {
   .secondary-page-title {
     font-size: 28px;
+  }
+}
+
+.fixed ~ .main {
+  margin-top: 150px;
+}
+
+@media screen and (max-width: 860px) {
+  .fixed ~ .main {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fixed ~ .main {
+    margin-top: 60px;
   }
 }
 

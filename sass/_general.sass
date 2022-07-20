@@ -32,10 +32,10 @@ body
     letter-spacing: 0.05em
     transform: translateX(-100px)
     opacity: 0
-    transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out
     &.anim-active
         transform: translateX(0)
         opacity: 1
+        transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out
 .text
     font-family: 'Montserrat'
     font-style: normal
@@ -139,6 +139,24 @@ body
     overflow: hidden
 .pb-40
     padding-bottom: 40px
+.m-auto
+    margin: auto
+    display: block
+.max-width-100
+    max-width: 100%
+.text-animation
+    opacity: 0
+    transform: translateY(50px)
+    &.anim-active
+        opacity: 1
+        transform: translateY(0px)
+        transition: opacity .75s ease-in-out, transform .75s ease-in-out
+.table
+    border-collapse: collapse
+.bg-colored
+    background: $bg-color
+.text-dark
+    color: $text-color !important
 
 @media screen and (max-width: 860px)
     .title
@@ -184,3 +202,13 @@ body
 @media screen and (max-width: 600px)
     .secondary-page-title
         font-size: 28px
+
+
+.fixed ~ .main
+    margin-top: 150px
+@media screen and (max-width: 860px)
+    .fixed ~ .main
+        margin-top: 70px
+@media screen and (max-width: 600px)
+    .fixed ~ .main
+        margin-top: 60px
