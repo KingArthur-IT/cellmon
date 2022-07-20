@@ -1,0 +1,22 @@
+.item-with-img
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    &__img-wrapper
+        flex-basis: 30%
+        & img
+            width: 100%
+    &__hero
+        flex-basis: 68%
+        & p
+    &__title
+        font-weight: bold
+        margin-bottom: 5px
+
+@media screen and (max-width: 768px)
+    .item-with-img
+        &__img-wrapper
+            display: none
+        &__hero
+            flex-basis: 100%
