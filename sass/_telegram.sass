@@ -1,0 +1,90 @@
+.telegram
+    display: flex
+    justify-content: space-between
+    &__hero
+        flex-basis: 68%
+        opacity: 0
+        transform: translateX(-100px)
+        transition: transform 1s ease-in-out   
+        &.anim-active
+            opacity: 1
+            transform: translateX(0px) 
+    &__img
+        flex-basis: 30%
+        position: relative
+        opacity: 0
+        transform: translateX(-100px)
+        transition: transform 1s ease-in-out  
+        z-index: -1  
+        &::after
+            content: ''
+            position: absolute
+            width: 300px
+            height: 300px
+            border-radius: 50%
+            background: $bg-color
+            top: 0px
+            right: 0px
+            z-index: -1
+            transform: scale(0)
+            transition: transform 1.0s ease-in-out    
+        & img
+            width: 100%    
+        &.anim-active
+            opacity: 1
+            transform: translateX(0px)
+            &::after
+                transform: scale(1)
+    &__mob-wrapper
+        display: flex
+    &__mob-img
+        display: none
+        &::after
+            content: ''
+            position: absolute
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            background: $bg-color
+            top: 0px
+            right: 0px
+            z-index: -1
+            transform: scale(0)
+            transition: transform 1.0s ease-in-out   
+        &.anim-active::after
+            opacity: 1
+            transform: scale(1)
+
+@media screen and (max-width: 1024px)
+    .telegram
+        &__img
+            &::after
+                width: 250px
+                height: 250px
+
+@media screen and (max-width: 860px)
+    .telegram
+        &__img
+            &::after
+                width: 200px
+                height: 200px
+
+@media screen and (max-width: 650px)
+    .telegram
+        &__hero
+            flex-basis: 100%
+        &__img
+            flex-basis: 1%
+            display: none
+        &__mob-img
+            display: block
+            & img
+                width: 100px
+@media screen and (max-width: 375px)
+    .telegram
+        &__mob-img
+            & img
+                width: 75px
+            &::after
+                width: 75px
+                height: 75px

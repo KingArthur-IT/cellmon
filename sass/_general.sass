@@ -137,6 +137,8 @@ body
     fill: #f03d3d
 .overflow-hidden
     overflow: hidden
+.pb-40
+    padding-bottom: 40px
 
 @media screen and (max-width: 860px)
     .title
@@ -151,6 +153,8 @@ body
 @media screen and (max-width: 375px)
     .container
         padding: 0 10px
+    .pb-40
+        padding-bottom: 20px
 
 .list
     list-style: none
@@ -167,6 +171,16 @@ body
             left: -15px
             top: 9px
             background-color: $secondary
-.my-20
-    margin-top: 20px
-    margin-bottom: 20px
+
+.secondary-page-title
+    margin-top: 60px
+    margin-bottom: 60px
+    font-size: 40px
+@media screen and (max-width: 860px)
+    .secondary-page-title
+        font-size: 30px
+        margin-top: 30px
+        margin-bottom: 30px
+@media screen and (max-width: 600px)
+    .secondary-page-title
+        font-size: 28px

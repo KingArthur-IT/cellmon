@@ -284,6 +284,10 @@ body {
   overflow: hidden;
 }
 
+.pb-40 {
+  padding-bottom: 40px;
+}
+
 @media screen and (max-width: 860px) {
   .title {
     font-size: 24px;
@@ -305,6 +309,9 @@ body {
 @media screen and (max-width: 375px) {
   .container {
     padding: 0 10px;
+  }
+  .pb-40 {
+    padding-bottom: 20px;
   }
 }
 
@@ -329,9 +336,24 @@ body {
   background-color: #FFA928;
 }
 
-.my-20 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.secondary-page-title {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 860px) {
+  .secondary-page-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .secondary-page-title {
+    font-size: 28px;
+  }
 }
 
 #header-nav {
@@ -2075,12 +2097,6 @@ body {
           transform: scale(1);
 }
 
-.portfolio__title {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  font-size: 40px;
-}
-
 .portfolio__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2185,14 +2201,152 @@ body {
   }
 }
 
-@media screen and (max-width: 860px) {
-  .portfolio__title {
-    font-size: 30px;
+.telegram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.telegram__hero {
+  -ms-flex-preferred-size: 68%;
+      flex-basis: 68%;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.telegram__hero.anim-active {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.telegram__img {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  z-index: -1;
+}
+
+.telegram__img::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #edf2f7;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.0s ease-in-out;
+  transition: -webkit-transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out, -webkit-transform 1.0s ease-in-out;
+}
+
+.telegram__img img {
+  width: 100%;
+}
+
+.telegram__img.anim-active {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.telegram__img.anim-active::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.telegram__mob-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.telegram__mob-img {
+  display: none;
+}
+
+.telegram__mob-img::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #edf2f7;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 1.0s ease-in-out;
+  transition: -webkit-transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out;
+  transition: transform 1.0s ease-in-out, -webkit-transform 1.0s ease-in-out;
+}
+
+.telegram__mob-img.anim-active::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@media screen and (max-width: 1024px) {
+  .telegram__img::after {
+    width: 250px;
+    height: 250px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .portfolio__title {
-    font-size: 28px;
+@media screen and (max-width: 860px) {
+  .telegram__img::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .telegram__hero {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .telegram__img {
+    -ms-flex-preferred-size: 1%;
+        flex-basis: 1%;
+    display: none;
+  }
+  .telegram__mob-img {
+    display: block;
+  }
+  .telegram__mob-img img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .telegram__mob-img img {
+    width: 75px;
+  }
+  .telegram__mob-img::after {
+    width: 75px;
+    height: 75px;
   }
 }
