@@ -52,7 +52,7 @@
                     <a class="header__contacts-tel" href="tel:+73652885555">+7 (3652) 88-55-55</a>
                     <a class="header__contacts-tel" href="tel:+79788576700">+7 (978) 857-67-00</a>
                 </div>
-                <button class="button primary-button header__btn">Заказать звонок</button>
+                <button class="button primary-button header__btn call-popup">Заказать звонок</button>
                 <div class="header__burger">
                     <svg class="burger-normal" width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="17" height="1" fill="#149dcc"/>
@@ -208,6 +208,39 @@
             Начните использовать связь на 100% сегодня. Хотите подключить себе? Обратитесь к специалистам, звоните нам на самый удобный для Вас номер и получите ответы прямо сейчас.
         </p>
     </main>
+    <div class="popup">
+        <div id="popup-form" class="form-wrapper">
+            <form class="form">
+                <svg class="form__close" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6.19287" y="20.6423" width="20.435" height="2.91929" rx="1.45965" transform="rotate(-45 6.19287 20.6423)" fill="#CCCCD8"/>
+                    <rect x="8.25708" y="6.19263" width="20.435" height="2.91929" rx="1.45965" transform="rotate(45 8.25708 6.19263)" fill="#CCCCD8"/>
+                </svg>
+                <h3 class="form__title">Заполните форму и мы перезвоним вам</h3>
+                <div class="input-wrapper">
+                    <input type="text" class="input form__input popup__name" placeholder="Ваше имя">
+                    <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="input-logo">
+                        <path d="M12.0043 13.4902C10.892 13.4902 10.3935 14.1536 8.59091 14.1536C6.75 14.1536 6.25142 13.4902 5.1392 13.4902C2.30114 13.4902 0 16.0196 0 19.0882V20.1248C0 21.2444 0.805399 22.1152 1.84091 22.1152H15.3409C16.3381 22.1152 17.1818 21.2444 17.1818 20.1248V19.0882C17.1818 16.0196 14.8423 13.4902 12.0043 13.4902ZM15.3409 20.1248H1.84091V19.0882C1.84091 17.0977 3.29829 15.4806 5.1392 15.4806C5.71449 15.4806 6.59659 16.144 8.59091 16.144C10.5469 16.144 11.429 15.4806 12.0043 15.4806C13.8452 15.4806 15.3409 17.0977 15.3409 19.0882V20.1248ZM8.59091 12.8267C11.6207 12.8267 14.1136 10.1729 14.1136 6.85555C14.1136 3.57972 11.6207 0.884399 8.59091 0.884399C5.52273 0.884399 3.06818 3.57972 3.06818 6.85555C3.06818 10.1729 5.52273 12.8267 8.59091 12.8267ZM8.59091 2.87478C10.5852 2.87478 12.2727 4.6993 12.2727 6.85555C12.2727 9.05327 10.5852 10.8363 8.59091 10.8363C6.55824 10.8363 4.90909 9.05327 4.90909 6.85555C4.90909 4.6993 6.55824 2.87478 8.59091 2.87478Z" fill="#CCCCD8"/>
+                    </svg>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="input form__input popup__tel" placeholder="Ваш номер телефона" data-slots="_" data-placeholder="+_ (___) ___-__-__">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="input-logo">
+                        <path d="M1.55769 1.91761L5.62501 1.00896C6.57692 0.79261 7.52884 1.26857 7.87499 2.13396L9.77885 6.54742C10.125 7.32627 9.90866 8.27818 9.21635 8.84069L7.48558 10.2686C8.69712 12.5186 10.601 14.3792 12.851 15.634L14.2789 13.9032C14.8413 13.2109 15.7933 12.9945 16.5721 13.3407L20.9856 15.2013C21.8509 15.5907 22.327 16.5426 22.1106 17.4945L21.202 21.5619C20.9856 22.4705 20.1635 23.0763 19.2548 23.0763C8.65385 23.0763 0 14.509 0 3.86473C0 2.95607 0.649037 2.13396 1.55769 1.91761ZM19.1682 20.9993L20.0769 17.1051L15.8365 15.2878L13.4135 18.2301C9.1298 16.1965 6.92308 13.9897 4.88943 9.70607L7.83173 7.283L6.01442 3.0426L2.07692 3.95126C2.1202 13.3407 9.77886 20.9561 19.1682 20.9993Z" fill="#CCCCD8"/>
+                    </svg>
+                </div>
+                <button type="submit" class="button primary-button form__btn popup__submit">Заказать звонок</button>
+            </form>
+        </div>
+    </div>
+    <div class="thanks-popup">
+        <div class="thanks-popup__content">
+            <svg class="thanks-popup__close" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6.19287" y="20.6423" width="20.435" height="2.91929" rx="1.45965" transform="rotate(-45 6.19287 20.6423)" fill="#CCCCD8"/>
+                <rect x="8.25708" y="6.19263" width="20.435" height="2.91929" rx="1.45965" transform="rotate(45 8.25708 6.19263)" fill="#CCCCD8"/>
+            </svg>
+            <h3 class="thanks-popup__text"><span>Спасибо!</span> <br> Мы свяжемся с Вами в ближайшее время.</h3>
+        </div>
+    </div>
     <footer class="footer">
         <div class="container">
              <div class="footer__wrapper">
@@ -240,5 +273,6 @@
     </footer>
     <script src="./script/scrollAnimation.js"></script>
     <script src="./script/burger.js"></script>
+    <script src="./script/popup.js"></script>
 </body>
 </html>
