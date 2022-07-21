@@ -64,18 +64,17 @@ body
     text-transform: uppercase
     line-height: 120%
     letter-spacing: 0.05em
-    transition: all 0.3s ease-in-out
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out
     z-index: 5
     overflow: hidden
 .primary-button
     text-transform: uppercase
-    padding: 27px 44px
+    padding: 22px 44px
     width: 315px
     background: $primary
     border-radius: 150px
     font-size: 15px
     color: #fff
-    transition: all 0.3s ease-in-out
     &::after
         content: ''
         position: absolute
@@ -211,7 +210,7 @@ body
 
 
 .fixed ~ .main
-    margin-top: 150px
+    margin-top: 136px
 @media screen and (max-width: 860px)
     .fixed ~ .main
         margin-top: 70px

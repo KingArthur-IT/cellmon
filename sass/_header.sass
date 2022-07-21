@@ -39,17 +39,23 @@
         display: flex
         align-items: center
     &__contacts-tel
+        font-family: 'Montserrat'
+        font-style: normal
+        font-weight: 400
         color: $primary
-        font-size: 22px
+        font-size: 20px
         font-weight: 700
+        margin-right: 20px
         &:hover
             color: $secondary
     &__burger
         display: none
-        margin-left: 20px
         & svg
             width: 19px
             height: 19px
+    &__btn
+        width: 230px
+        padding: 22px 10px
 .px-20
     padding: 0 20px
 .burger-close
@@ -59,19 +65,13 @@
 .burger-opened .burger-close
     display: block
 
-.fixed-menu
-    display: none
 .fixed
     position: fixed
     background-color: #fff
     width: 100%
     top: 0
-    padding: 15px 0
+    padding: 5px 0 0 0
     z-index: 10
-    & .nav-menu
-        display: none
-    & .fixed-menu
-        display: flex
     & .header__logo-img
         width: 40px
         height: 40px
@@ -83,14 +83,10 @@
         font-size: 16px
 
 @media screen and (max-width: 1024px)
-    .fixed
-        //padding: 0
-    .fixed-menu
-        display: none
-    .fixed .fixed-menu
-        display: none
-    .fixed .header__burger
-        display: block
+    .header
+        &__contacts-tel-wrap
+            display: flex
+            flex-direction: column
 
 @media screen and (max-width: 860px)
     .header
@@ -105,13 +101,13 @@
                 font-size: 10px
         &__contacts-tel
             display: none
+        &__btn
+            display: none
     .fixed
         padding: 0
-    .fixed-menu
-        display: none
-    .fixed .fixed-menu
-        display: none
     .header__burger
+        display: block
+    .fixed .header__burger
         display: block
 
 @media screen and (max-width: 600px)
