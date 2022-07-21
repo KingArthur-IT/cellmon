@@ -155,3 +155,126 @@
     .opened .hexagon-burger-3
         bottom: 130px
         left: 75px
+
+.disign-circle-1
+    position: absolute
+    width: 400px
+    height: 400px
+    top: -150px
+    left: -150px
+    border-radius: 50%
+    background: $secondary
+    z-index: -1
+    transform: scale(0)
+
+.disign-circle-2
+    position: absolute
+    width: 400px
+    height: 400px
+    bottom: -150px
+    right: -150px
+    border-radius: 50%
+    background: $secondary
+    z-index: -1
+    transform: scale(0)
+
+.disign-circle-3
+    position: absolute
+    width: 200px
+    height: 200px
+    top: 200px
+    left: 300px
+    border-radius: 50%
+    background: $secondary
+    z-index: -1
+    transform: scale(0)
+
+.disign-circle-4
+    position: absolute
+    width: 250px
+    height: 250px
+    top: 400px
+    right: -30px
+    border-radius: 50%
+    background: #FFA928
+    z-index: -1
+    transform: scale(0)
+
+.anim-active
+    &.disign-circle-1
+        transform: scale(1)
+        opacity: 0.8
+        transition: all 0.75s ease-in-out
+    &.disign-circle-2
+        transform: scale(1)
+        opacity: 0.8
+        transition: all 0.75s ease-in-out
+    &.disign-circle-3
+        transform: scale(1)
+        opacity: 0.8
+        transition: all 0.75s ease-in-out
+    &.disign-circle-4
+        transform: scale(1)
+        opacity: 0.8
+        transition: all 0.75s ease-in-out
+
+
+@media screen and (max-width: 860px)
+    .disign-circle-1
+        width: 300px
+        height: 300px
+        top: -100px
+        left: -100px
+
+    .disign-circle-2
+        width: 300px
+        height: 300px
+        bottom: -150px
+        right: -150px
+
+    .disign-circle-3
+        display: none
+
+    .disign-circle-4
+        width: 250px
+        height: 250px
+        top: 400px
+        right: -30px
+
+@media screen and (max-width: 600px)
+    .disign-circle-1
+        width: 200px
+        height: 200px
+        top: -50px
+        left: -100px
+
+    .disign-circle-2
+        width: 200px
+        height: 200px
+        bottom: -80px
+        right: -120px
+
+    .disign-circle-4
+        width: 150px
+        height: 150px
+        top: 400px
+        right: -100px
+
+@media screen and (max-width: 425px)
+    .disign-circle-1
+        width: 100px
+        height: 100px
+        top: -20px
+        left: -30px
+
+    .disign-circle-2
+        width: 100px
+        height: 100px
+        bottom: -40px
+        right: -20px
+
+    .disign-circle-4
+        width: 100px
+        height: 100px
+        top: 200px
+        right: -40px
