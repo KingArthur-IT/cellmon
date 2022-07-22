@@ -46,6 +46,8 @@
             line-height: 95%
             & span
                 color: $primary
+    &__burger
+        display: none
 .blog-intro
     margin-bottom: 60px
     &__text
@@ -86,6 +88,14 @@
             transform: scale(1.2)
     &__hero
         flex-basis: 35%
+    &__title
+        font-family: 'Druk Cyr'
+        font-style: normal
+        font-weight: 700
+        font-size: 30px
+        line-height: 110%
+        text-align: left
+        letter-spacing: 0.05em
 
 .blog-preview
     margin-bottom: 30px
@@ -100,9 +110,16 @@
         margin-bottom: 30px
     &__hero
         padding: 10px
-        & h3
-            margin: 0
-            margin-bottom: 15px
+    &__title
+        margin: 0
+        margin-bottom: 15px
+        font-family: 'Druk Cyr'
+        font-style: normal
+        font-weight: 700
+        font-size: 30px
+        line-height: 110%
+        text-align: center
+        letter-spacing: 0.05em
     &__img
         overflow: hidden
         border-radius: 50px
@@ -125,6 +142,10 @@
         display: block
     
 @media screen and (max-width: 860px)
+    .blog-big-preview__title
+        font-size: 24px
+    .blog-preview__title
+        font-size: 24px
     .blog__tag
         font-size: 14px
     .blog-header
@@ -148,6 +169,10 @@
             flex-basis: 49%
 
 @media screen and (max-width: 600px)
+    .blog-big-preview__title
+        font-size: 22px
+    .blog-preview__title
+        font-size: 22px
     .blog__tag
         font-size: 12px
     .blog
@@ -162,6 +187,8 @@
                 font-size: 32px
         &__btn
             display: none
+        &__burger
+            display: block
     .blog-intro__text
         font-size: 22px
 
