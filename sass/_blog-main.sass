@@ -1,0 +1,192 @@
+.blog-header
+    margin-bottom: 60px
+    &__socials
+        display: flex
+        align-items: center
+    &__btn
+        padding: 5px 10px
+        background: transparent
+        border-radius: 50px
+        border: 1px solid $primary
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $primary
+        font-weight: 500
+        font-size: 12px
+        &:hover
+            border: 1px solid $secondary
+            background: rgba($secondary, 0.2)
+            color: $text-color
+    &__hero
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 10px
+        z-index: 20
+        position: relative
+    &__logo
+        &-wrapper
+            display: flex
+            align-items: center
+        &-img
+            width: 75px
+            height: 75px
+            margin-right: 5px
+        &-text
+            display: flex
+            flex-direction: column
+        &-title
+            font-family: 'Druk Cyr'
+            font-style: normal
+            font-weight: 500
+            font-size: 50px
+            color: $text-color
+            letter-spacing: 2.5px
+            line-height: 95%
+            & span
+                color: $primary
+.blog-intro
+    margin-bottom: 60px
+    &__text
+        font-size: 30px
+        border-bottom: 1px solid $text-color
+        padding-bottom: 10px
+
+.blog
+    &__tag-list
+        padding: 0
+        list-style: none
+        display: flex
+        align-items: center
+    &__tag-item
+        margin: 0
+        padding: 0
+        margin-right: 20px
+        cursor: pointer
+    &__tag
+        font-size: 16px
+        color: $primary
+        font-weight: bold
+        margin: 10px 0
+
+.blog-big-preview
+    display: flex
+    margin-bottom: 30px
+    justify-content: space-between
+    &__img
+        margin-right: 30px
+        overflow: hidden
+        flex-basis: 64%
+        border-radius: 50px
+        & img
+            width: 100%
+            transition: transform 0.5s ease-in-out
+        &:hover img
+            transform: scale(1.2)
+    &__hero
+        flex-basis: 35%
+
+.blog-preview
+    margin-bottom: 30px
+    &__list
+        padding: 0
+        list-style: none
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__item
+        flex-basis: 32%
+        margin-bottom: 30px
+    &__hero
+        padding: 10px
+        & h3
+            margin: 0
+            margin-bottom: 15px
+    &__img
+        overflow: hidden
+        border-radius: 50px
+        & img
+            width: 100%
+            transition: transform 0.5s ease-in-out
+        &:hover img
+            transform: scale(1.2)
+    &__more-btn
+        margin: auto
+
+.blog-footer
+    padding-top: 30px
+    padding-bottom: 1px
+    background-color: $bg-color
+    &__copyright
+        text-align: center
+        font-size: 12px
+        margin: 20px 0
+        display: block
+    
+@media screen and (max-width: 860px)
+    .blog__tag
+        font-size: 14px
+    .blog-header
+        margin-bottom: 30px
+        &__logo
+            &-img
+                width: 50px
+                height: 50px
+            &-title
+                font-size: 38px
+@media screen and (max-width: 768px)
+    .blog-big-preview
+        flex-wrap: wrap
+        &__img
+            margin-right: 0px
+            flex-basis: 100%
+        &__hero
+            flex-basis: 100%
+    .blog-preview
+        &__item
+            flex-basis: 49%
+
+@media screen and (max-width: 600px)
+    .blog__tag
+        font-size: 12px
+    .blog
+        &__tag-list
+            display: none
+    .blog-header
+        &__logo
+            &-img
+                width: 40px
+                height: 40px
+            &-title
+                font-size: 32px
+        &__btn
+            display: none
+    .blog-intro__text
+        font-size: 22px
+
+@media screen and (max-width: 500px)
+    .blog-preview
+        &__img
+            margin-right: 0px
+        &__item
+            flex-basis: 100%
+@media screen and (max-width: 375px)
+    .blog-preview
+        &__img
+            margin-right: 0px
+        &__item
+            flex-basis: 100%
+    .blog-header
+        &__logo
+            &-img
+                width: 35px
+                height: 35px
+            &-title
+                font-size: 24px
+    .blog-intro__text
+        font-size: 18px
+    .blog-preview__more-btn
+        padding: 18px 40px
+        width: auto
+        font-size: 14px
