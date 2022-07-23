@@ -3581,3 +3581,124 @@ body {
   font-weight: 400;
   padding: 0 20px;
 }
+
+.blog-article__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.blog-article__head-hero {
+  margin-right: 30px;
+  -ms-flex-preferred-size: 39%;
+      flex-basis: 39%;
+}
+
+.blog-article__title {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 70px;
+}
+
+.blog-article__head-info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: #3A3A3C;
+}
+
+.blog-article__date {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.blog-article__tag {
+  margin-left: 10px;
+  -ms-flex-wrap: bold;
+      flex-wrap: bold;
+  color: #FFA928;
+  font-size: 16px;
+}
+
+.blog-article__thumbnail {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+.blog-article__thumbnail img {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.blog-article__content {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .blog-article__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog-article__head-hero {
+    margin-right: 0px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .blog-article__thumbnail {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-article__title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blog-article__title {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .blog-article__head {
+    margin-bottom: 30px;
+  }
+  .blog-article__head-hero {
+    margin-bottom: 15px;
+  }
+  .blog-article__date {
+    font-size: 14px;
+  }
+  .blog-article__tag {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .blog-article__title {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .blog-article__title {
+    font-size: 30px;
+  }
+}
