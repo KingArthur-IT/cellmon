@@ -69,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ['popup'].forEach((form) => {
         document.getElementsByClassName(`${form}__submit`)[0].addEventListener('click', (e) => {
             e.preventDefault();
+
+            if (document.getElementById('hidden-input').value != '')
+                return;
+                
             const name = document.getElementsByClassName(`${form}__name`)[0].value;
             const phone = document.getElementsByClassName(`${form}__tel`)[0].value;
 

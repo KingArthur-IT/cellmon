@@ -2094,9 +2094,9 @@ body {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: rgba(108, 108, 108, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   top: 0;
-  z-index: 15;
+  z-index: 50;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2155,7 +2155,7 @@ body {
 }
 
 .thanks-popup__text span {
-  color: #149dcc;
+  color: #FFA928;
 }
 
 .confidence {

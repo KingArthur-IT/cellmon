@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //submit
     document.querySelector('.blog-popup__submit')?.addEventListener('click', (e) => {
         e.preventDefault();
+        if (document.getElementById('hidden-input').value != '')
+            return;
+
         const email = document.querySelector('.blog-popup__email')?.value;
 
         document.querySelector('.blog-popup__email')?.classList.remove('error');
