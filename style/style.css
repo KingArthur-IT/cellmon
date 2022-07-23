@@ -55,6 +55,7 @@ body {
   max-width: 1190px;
   margin: auto;
   padding: 0 30px;
+  position: relative;
 }
 
 .section {
@@ -2896,10 +2897,11 @@ body {
 }
 
 .blog-intro {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .blog-intro__text {
+  max-width: 600px;
   font-size: 30px;
   border-bottom: 1px solid #3A3A3C;
   padding-bottom: 10px;
@@ -2923,6 +2925,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 600px;
 }
 
 .blog__tag-item {
@@ -3047,6 +3052,15 @@ body {
   display: block;
 }
 
+@media screen and (max-width: 975px) {
+  .blog-intro__text {
+    max-width: 410px;
+  }
+  .blog__tag-list {
+    max-width: 450px;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .blog-big-preview__title {
     font-size: 24px;
@@ -3087,6 +3101,15 @@ body {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
+  .blog-intro {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .blog-intro__text {
+    max-width: 350px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -3117,6 +3140,20 @@ body {
   }
   .blog-intro__text {
     font-size: 22px;
+    max-width: 300px;
+  }
+  .blog__tag-list {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .blog-intro {
+    margin-bottom: 20px;
+  }
+  .blog-intro__text {
+    max-width: 100%;
+    border-bottom: none;
   }
 }
 
@@ -3325,4 +3362,200 @@ body {
 
 .thanks-popup__subtitle {
   text-align: center;
+}
+
+.blog-design-item {
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
+  opacity: 0;
+}
+
+.blog-hex-1 {
+  top: 0px;
+  right: 150px;
+  opacity: 0;
+}
+
+.blog-hex-2 {
+  top: 0px;
+  right: 150px;
+  opacity: 0;
+}
+
+.blog-hex-3 {
+  top: 0px;
+  right: 150px;
+  opacity: 0;
+}
+
+.blog-hex-4 {
+  top: 0px;
+  right: 150px;
+  opacity: 0;
+}
+
+.blog-hex-5 {
+  top: 0px;
+  right: 150px;
+  opacity: 0;
+}
+
+.blog-hex-6 {
+  top: 0px;
+  right: 150px;
+  opacity: 0;
+}
+
+.anim-active.blog-hex-1 {
+  top: 0px;
+  right: 50px;
+  opacity: 0.8;
+}
+
+.anim-active.blog-hex-2 {
+  top: 50px;
+  right: 140px;
+  opacity: 0.8;
+}
+
+.anim-active.blog-hex-3 {
+  top: 150px;
+  right: 140px;
+  opacity: 0.8;
+}
+
+.anim-active.blog-hex-4 {
+  top: 100px;
+  right: 50px;
+  opacity: 0.8;
+}
+
+.anim-active.blog-hex-5 {
+  top: 0px;
+  right: 230px;
+  opacity: 0.8;
+}
+
+.anim-active.blog-hex-6 {
+  top: 100px;
+  right: 230px;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 860px) {
+  .blog-design-item {
+    width: 90px;
+  }
+  .anim-active.blog-hex-1 {
+    top: 0px;
+    right: 50px;
+  }
+  .anim-active.blog-hex-2 {
+    top: 45px;
+    right: 129px;
+  }
+  .anim-active.blog-hex-3 {
+    top: 133px;
+    right: 129px;
+  }
+  .anim-active.blog-hex-4 {
+    top: 89px;
+    right: 50px;
+  }
+  .anim-active.blog-hex-5 {
+    top: 0px;
+    right: 207px;
+  }
+  .anim-active.blog-hex-6 {
+    top: 89px;
+    right: 207px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-design-item {
+    width: 60px;
+  }
+  .anim-active.blog-hex-1 {
+    top: 0px;
+  }
+  .anim-active.blog-hex-2 {
+    top: 30px;
+    right: 105px;
+  }
+  .anim-active.blog-hex-3 {
+    top: 90px;
+    right: 105px;
+  }
+  .anim-active.blog-hex-4 {
+    top: 60px;
+  }
+  .anim-active.blog-hex-5 {
+    top: 0px;
+    right: 158px;
+  }
+  .anim-active.blog-hex-6 {
+    top: 60px;
+    right: 158px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .anim-active.blog-hex-1 {
+    right: 30px;
+  }
+  .anim-active.blog-hex-2 {
+    right: 85px;
+  }
+  .anim-active.blog-hex-3 {
+    right: 85px;
+  }
+  .anim-active.blog-hex-4 {
+    right: 30px;
+  }
+  .anim-active.blog-hex-5 {
+    right: 138px;
+  }
+  .anim-active.blog-hex-6 {
+    right: 138px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blog-design-item {
+    width: 60px;
+  }
+  .anim-active.blog-hex-1 {
+    top: 0px;
+    right: 30px;
+  }
+  .anim-active.blog-hex-2 {
+    top: 30px;
+    right: 85px;
+  }
+  .anim-active.blog-hex-3 {
+    top: 90px;
+    right: 85px;
+  }
+  .anim-active.blog-hex-4 {
+    top: 60px;
+    right: 30px;
+  }
+  .anim-active.blog-hex-5 {
+    top: 0px;
+    right: 138px;
+  }
+  .anim-active.blog-hex-6 {
+    top: 60px;
+    right: 138px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .blog-design-item {
+    display: none;
+  }
 }

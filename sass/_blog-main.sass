@@ -49,8 +49,9 @@
     &__burger
         display: none
 .blog-intro
-    margin-bottom: 60px
+    margin-bottom: 80px
     &__text
+        max-width: 600px
         font-size: 30px
         border-bottom: 1px solid $text-color
         padding-bottom: 10px
@@ -68,6 +69,8 @@
         list-style: none
         display: flex
         align-items: center
+        flex-wrap: wrap
+        max-width: 600px
     &__tag-item
         margin: 0
         padding: 0
@@ -135,7 +138,14 @@
         font-size: 12px
         margin: 20px 0
         display: block
-    
+
+@media screen and (max-width: 975px)   
+    .blog-intro
+        &__text
+            max-width: 410px
+    .blog
+        &__tag-list
+            max-width: 450px
 @media screen and (max-width: 860px)
     .blog-big-preview__title
         font-size: 24px
@@ -162,7 +172,12 @@
     .blog-preview
         &__item
             flex-basis: 49%
-
+    .blog-intro
+        margin-bottom: 40px
+@media screen and (max-width: 660px)
+    .blog-intro
+        &__text
+            max-width: 350px
 @media screen and (max-width: 600px)
     .blog-big-preview__title
         font-size: 22px
@@ -184,9 +199,19 @@
             display: none
         &__burger
             display: block
-    .blog-intro__text
-        font-size: 22px
-
+    .blog-intro
+        &__text
+            font-size: 22px
+            max-width: 300px
+    .blog
+        &__tag-list
+            max-width: 300px
+@media screen and (max-width: 530px)
+    .blog-intro
+        margin-bottom: 20px
+        &__text
+            max-width: 100%
+            border-bottom: none
 @media screen and (max-width: 500px)
     .blog-preview
         &__img
