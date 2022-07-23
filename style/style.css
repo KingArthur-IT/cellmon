@@ -239,7 +239,7 @@ body {
 }
 
 .input:focus {
-  color: #8F8F8F;
+  color: #3A3A3C;
   background: #EEEEEE;
   border: 2px solid #149dcc;
   outline: none;
@@ -259,6 +259,10 @@ body {
 
 .input:focus::placeholder {
   color: #CCCCD8;
+}
+
+.input:focus ~ .input-logo path {
+  fill: #149dcc;
 }
 
 .input-logo {
@@ -2052,7 +2056,7 @@ body {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: rgba(108, 108, 108, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   top: 0;
   z-index: 50;
   display: -webkit-box;
@@ -2901,6 +2905,15 @@ body {
   padding-bottom: 10px;
 }
 
+.blog-title {
+  font-family: 'Druk Cyr';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+}
+
 .blog__tag-list {
   padding: 0;
   list-style: none;
@@ -2963,13 +2976,7 @@ body {
 }
 
 .blog-big-preview__title {
-  font-family: 'Druk Cyr';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 110%;
   text-align: left;
-  letter-spacing: 0.05em;
 }
 
 .blog-preview {
@@ -3002,13 +3009,7 @@ body {
 .blog-preview__title {
   margin: 0;
   margin-bottom: 15px;
-  font-family: 'Druk Cyr';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 110%;
   text-align: center;
-  letter-spacing: 0.05em;
 }
 
 .blog-preview__img {
@@ -3152,4 +3153,176 @@ body {
     width: auto;
     font-size: 14px;
   }
+}
+
+.blog-popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  z-index: 50;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup-visible {
+  opacity: 1 !important;
+}
+
+.popup-show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.thanks-popup {
+  padding: 10px;
+}
+
+.blog-form {
+  position: relative;
+  width: 500px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px 29px 30px;
+  z-index: 2;
+}
+
+.blog-form__title {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.blog-form__input {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.blog-form__input-logo {
+  width: 25px;
+  height: 25px;
+  top: 20px;
+}
+
+.blog-form__input-logo path {
+  fill: #D3D3D3;
+}
+
+.blog-form__btn {
+  width: 100%;
+}
+
+.blog-form__confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 26px 0 28px;
+}
+
+.blog-form__close {
+  position: absolute;
+  cursor: pointer;
+  top: 8px;
+  right: 8px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-form__close:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.blog-form__close:hover rect {
+  fill: #FFA928;
+}
+
+.blog-form__design-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 250px;
+  height: 250px;
+  opacity: 0.1;
+}
+
+@media screen and (max-width: 460px) {
+  .blog-form__title {
+    font-size: 18px;
+  }
+  .blog-form__input {
+    height: 56px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .blog-form__btn {
+    height: 56px;
+    font-size: 12px;
+  }
+  .blog-form__design-icon {
+    right: 10px;
+    bottom: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  #blog-popup-form {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .blog-form {
+    padding: 20px 20px 17px;
+  }
+  .blog-form__design-icon {
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #blog-popup-form .blog-form__title {
+    padding: 0 15px;
+  }
+}
+
+.thanks-popup__wrapper {
+  position: relative;
+  width: 500px;
+  min-height: 200px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px 29px 30px;
+  z-index: 2;
+}
+
+.thanks-popup__title {
+  text-align: center;
+  color: #FFA928;
+  font-size: 40px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.thanks-popup__subtitle {
+  text-align: center;
 }
