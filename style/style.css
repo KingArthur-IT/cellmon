@@ -3559,3 +3559,25 @@ body {
     display: none;
   }
 }
+
+.blog-login__form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.blog-login__login-icon {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+}
+
+.blog-login__error {
+  margin-bottom: 30px;
+  color: red;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  padding: 0 20px;
+}
