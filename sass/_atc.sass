@@ -17,6 +17,23 @@
         transform: translateY(20px)
         opacity: 0
         transition: all 0.75s ease-in-out
+        position: relative
+        overflow: hidden
+        &::after
+            content: ''
+            position: absolute
+            top: -400px
+            right: -400px
+            border-radius: 50%
+            background: $secondary
+            width: 1000px
+            height: 1000px
+            opacity: 0.8
+            z-index: -1
+            transform: scale(0)
+            transition: transform .4s ease-in-out
+        &:hover::after
+            transform: scale(1)
         &.anim-active
             transform: translateX(0)
             opacity: 1

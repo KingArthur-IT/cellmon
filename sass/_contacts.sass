@@ -1,4 +1,6 @@
 .contacts
+    &__order-wrap
+        position: relative
     &__orders
         list-style: none
         display: flex
@@ -12,13 +14,32 @@
         flex-direction: column
         transform: translateY(50px)
         opacity: 0
-        transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out
+        transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out, box-shadow 0.2s ease-in-out
         margin-right: 20px
         margin-bottom: 30px
         padding: 10px 20px
         text-align: center
         box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2)
         color: $text-color
+        position: relative
+        overflow: hidden
+        &::after
+            content: ''
+            position: absolute
+            top: -300px
+            right: -300px
+            border-radius: 50%
+            background: $secondary
+            width: 800px
+            height: 800px
+            opacity: 0.8
+            z-index: -1
+            transform: scale(0)
+            transition: transform .4s ease-in-out
+        &:hover
+            box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2)
+            &::after
+                transform: scale(1)
         &:nth-last-child()
             margin-right: 0
         &.anim-active
@@ -37,9 +58,11 @@
     &__input
         width: 100%
         margin-bottom: 10px
-    &__map iframe
-        width: 100%
-        margin-bottom: 60px
+    &__map 
+        margin-top: 100px
+        & iframe
+            width: 100%
+            margin-bottom: 60px
     &__link
         width: fit-content
         display: block
@@ -50,7 +73,8 @@
         top: 21px
     &__message.error
         border: 1px solid red
-
+    &__figure-wrapper
+        position: relative
 
 @media screen and (max-width: 1100px)
     .contacts
@@ -84,4 +108,3 @@
         &__form-wrap
             flex-basis: 100%
 
-        
