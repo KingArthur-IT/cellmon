@@ -134,7 +134,34 @@ body
     left: 27px
     & path
         transition: all 0.3s ease-in-out
-
+.textarea
+    background: #EEEEEE
+    border-radius: 50px
+    border: none
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    padding: 22px 24px
+    border: 2px solid #EEEEEE
+    color: #D3D3D3
+    transition: all 0.3s ease-in-out
+    caret-color: $primary
+    &::placeholder
+        color: #CCCCD8
+    &:hover
+        background: #D3D3D3
+        color: #8F8F8F
+        &::placeholder
+            color: #8F8F8F
+    &:focus
+        color: $text-color
+        background: #EEEEEE
+        border: 2px solid $primary
+        outline: none
+        &::placeholder
+            color: #CCCCD8
+        & ~ .input-logo path
+            fill: $primary
 .row-reverse
     flex-direction: row-reverse
 .error ~ .input-logo path

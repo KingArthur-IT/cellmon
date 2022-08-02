@@ -1,0 +1,87 @@
+.contacts
+    &__orders
+        list-style: none
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        padding: 0
+    &__order-item
+        flex-basis: 31%
+        min-height: 350px
+        display: flex
+        flex-direction: column
+        transform: translateY(50px)
+        opacity: 0
+        transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out
+        margin-right: 20px
+        margin-bottom: 30px
+        padding: 10px 20px
+        text-align: center
+        box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2)
+        color: $text-color
+        &:nth-last-child()
+            margin-right: 0
+        &.anim-active
+            transform: translateY(0)
+            opacity: 1
+    &__order-text
+        color: $text-color
+    &__contacts-wrap
+        display: flex
+        justify-content: space-between
+        margin-bottom: 30px
+    &__adress
+        flex-basis: 40%
+    &__form-wrap
+        flex-basis: 50%
+    &__input
+        width: 100%
+        margin-bottom: 10px
+    &__map iframe
+        width: 100%
+        margin-bottom: 60px
+    &__link
+        width: fit-content
+        display: block
+        margin-bottom: 5px
+    &__input-svg
+        width: 22px
+        height: 22px
+        top: 21px
+    &__message.error
+        border: 1px solid red
+
+
+@media screen and (max-width: 1100px)
+    .contacts
+        &__orders
+            justify-content: center
+@media screen and (max-width: 930px)
+    .contacts
+        &__order-item
+            flex-basis: 40%
+@media screen and (max-width: 860px)
+    .contacts
+        &__order-item
+            flex-basis: 100%
+            min-height: auto
+            padding: 10px 20px 30px
+@media screen and (max-width: 768px)
+    .contacts
+        &__adress
+            flex-basis: 38%
+        &__form-wrap
+            flex-basis: 55%
+@media screen and (max-width: 600px)
+    .contacts
+        &__order-item
+            flex-basis: 100%
+            margin-right: 0
+        &__contacts-wrap
+            flex-direction: column
+        &__adress
+            flex-basis: 100%
+        &__form-wrap
+            flex-basis: 100%
+
+        

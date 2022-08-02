@@ -277,6 +277,85 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.textarea {
+  background: #EEEEEE;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  padding: 22px 24px;
+  border: 2px solid #EEEEEE;
+  color: #D3D3D3;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  caret-color: #149dcc;
+}
+
+.textarea::-webkit-input-placeholder {
+  color: #CCCCD8;
+}
+
+.textarea:-ms-input-placeholder {
+  color: #CCCCD8;
+}
+
+.textarea::-ms-input-placeholder {
+  color: #CCCCD8;
+}
+
+.textarea::placeholder {
+  color: #CCCCD8;
+}
+
+.textarea:hover {
+  background: #D3D3D3;
+  color: #8F8F8F;
+}
+
+.textarea:hover::-webkit-input-placeholder {
+  color: #8F8F8F;
+}
+
+.textarea:hover:-ms-input-placeholder {
+  color: #8F8F8F;
+}
+
+.textarea:hover::-ms-input-placeholder {
+  color: #8F8F8F;
+}
+
+.textarea:hover::placeholder {
+  color: #8F8F8F;
+}
+
+.textarea:focus {
+  color: #3A3A3C;
+  background: #EEEEEE;
+  border: 2px solid #149dcc;
+  outline: none;
+}
+
+.textarea:focus::-webkit-input-placeholder {
+  color: #CCCCD8;
+}
+
+.textarea:focus:-ms-input-placeholder {
+  color: #CCCCD8;
+}
+
+.textarea:focus::-ms-input-placeholder {
+  color: #CCCCD8;
+}
+
+.textarea:focus::placeholder {
+  color: #CCCCD8;
+}
+
+.textarea:focus ~ .input-logo path {
+  fill: #149dcc;
+}
+
 .row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1446,7 +1525,7 @@ body {
 .anim-active.disign-circle-1 {
   -webkit-transform: scale(1);
           transform: scale(1);
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
 }
@@ -1454,7 +1533,7 @@ body {
 .anim-active.disign-circle-2 {
   -webkit-transform: scale(1);
           transform: scale(1);
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
 }
@@ -1462,7 +1541,7 @@ body {
 .anim-active.disign-circle-3 {
   -webkit-transform: scale(1);
           transform: scale(1);
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
 }
@@ -1470,7 +1549,7 @@ body {
 .anim-active.disign-circle-4 {
   -webkit-transform: scale(1);
           transform: scale(1);
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
 }
@@ -1903,6 +1982,165 @@ body {
   18% {
     -webkit-transform: translate(30%, 30%);
             transform: translate(30%, 30%);
+  }
+}
+
+.contacts__orders {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.contacts__order-item {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, opacity 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+  color: #3A3A3C;
+}
+
+.contacts__order-item:nth-last-child() {
+  margin-right: 0;
+}
+
+.contacts__order-item.anim-active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.contacts__order-text {
+  color: #3A3A3C;
+}
+
+.contacts__contacts-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.contacts__adress {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.contacts__form-wrap {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.contacts__input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.contacts__link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contacts__input-svg {
+  width: 22px;
+  height: 22px;
+  top: 21px;
+}
+
+.contacts__message.error {
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 1100px) {
+  .contacts__orders {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .contacts__order-item {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .contacts__order-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    min-height: auto;
+    padding: 10px 20px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__adress {
+    -ms-flex-preferred-size: 38%;
+        flex-basis: 38%;
+  }
+  .contacts__form-wrap {
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contacts__order-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+  }
+  .contacts__contacts-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts__adress {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .contacts__form-wrap {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
