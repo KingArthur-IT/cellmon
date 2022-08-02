@@ -102,8 +102,57 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
+    document.getElementsByClassName(`contacts__submit`)[0].addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (document.getElementById('contacts-hidden-input').value != '')
+            return;
+            
+        const name = document.getElementsByClassName(`contacts__name`)[0].value;
+        const phone = document.getElementsByClassName(`contacts__tel`)[0].value;
+        const email = document.getElementsByClassName(`contacts__email`)[0].value;
+        const message = document.getElementsByClassName(`contacts__message`)[0].value;
+
+        document.getElementsByClassName(`contacts__name`)[0].classList.remove('error');
+        document.getElementsByClassName(`contacts__tel`)[0].classList.remove('error');
+        document.getElementsByClassName(`contacts__email`)[0].classList.remove('error');
+        document.getElementsByClassName(`contacts__message`)[0].classList.remove('error');
+
+        let isValid = true;
+        if (name.length < 3){
+            document.getElementsByClassName(`contacts__name`)[0].classList.add('error');
+            isValid = false;
+        };
+        if (phone.includes('_') || phone.length === 0){
+            document.getElementsByClassName(`contacts__tel`)[0].classList.add('error');
+            isValid = false;
+        };
+
+        const validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!validation.test(email)) {
+            document.getElementsByClassName(`contacts__email`)[0].classList.add('error');
+            isValid = false;
+        }
+
+        if (message.length < 10){
+            document.getElementsByClassName(`contacts__message`)[0].classList.add('error');
+            isValid = false;
+        }
+
+        if (!isValid) return;
+
+        showPopup('thanks-popup');
+        
+        // postData('https://k095pa95.ru/getnumbers/webhook.php', { name: name, phone: phone })
+        //     .then((data) => {
+        //         showPopup('thanks-popup');
+        //         console.log(data);
+        //     });
+    });
+
+
     //validate
-    ['popup'].forEach((form) => {
+    ['popup', 'contacts'].forEach((form) => {
         document.getElementsByClassName(`${form}__name`)[0].addEventListener('input', () => {
             document.getElementsByClassName(`${form}__name`)[0].classList.remove('error');
 
@@ -112,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         })
     });
-    ['popup'].forEach((form) => {
+    ['popup', 'contacts'].forEach((form) => {
         document.getElementsByClassName(`${form}__tel`)[0].addEventListener('input', () => {
             document.getElementsByClassName(`${form}__tel`)[0].classList.remove('error');
 
@@ -121,5 +170,21 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         })
     });
+    document.getElementsByClassName(`contacts__email`)[0].addEventListener('input', () => {
+        document.getElementsByClassName(`contacts__email`)[0].classList.remove('error');
+
+        const validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const email = document.getElementsByClassName(`contacts__email`)[0].value;
+        if (!validation.test(email)){
+            document.getElementsByClassName(`contacts__email`)[0].classList.add('error');
+        };
+    });
+    document.getElementsByClassName(`contacts__message`)[0].addEventListener('input', () => {
+        document.getElementsByClassName(`contacts__message`)[0].classList.remove('error');
+
+        if (document.getElementsByClassName(`contacts__message`)[0].value.length < 10){
+            document.getElementsByClassName(`contacts__message`)[0].classList.add('error');
+        };
+    })
 
 });
