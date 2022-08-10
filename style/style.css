@@ -1092,7 +1092,7 @@ body {
 }
 
 .abilities__item {
-  padding: 40px 40px 40px 120px;
+  padding: 40px 40px 20px 80px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1116,7 +1116,7 @@ body {
 .abilities__item span {
   position: absolute;
   color: #149dcc;
-  font-size: 100px;
+  font-size: 40px;
   font-weight: 900;
   left: 30px;
   top: 40px;
@@ -1129,11 +1129,12 @@ body {
 
 @media screen and (max-width: 600px) {
   .abilities__item {
-    padding: 20px 20px 20px 90px;
+    padding: 20px 20px 10px 60px;
   }
   .abilities span {
-    font-size: 80px;
+    font-size: 40px;
     left: 0px;
+    top: 30px;
   }
 }
 
@@ -1143,10 +1144,10 @@ body {
     padding-left: 10px;
   }
   .abilities__item {
-    padding: 20px 10px 0px 70px;
+    padding: 20px 10px 0px 45px;
   }
   .abilities span {
-    font-size: 60px;
+    font-size: 30px;
   }
 }
 
