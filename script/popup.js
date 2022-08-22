@@ -94,11 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             showPopup('thanks-popup');
             
-            // postData('https://k095pa95.ru/getnumbers/webhook.php', { name: name, phone: phone })
-            //     .then((data) => {
-            //         showPopup('thanks-popup');
-            //         console.log(data);
-            //     });
+            postData('https://cellmon.ru/form_worker/index.php', { name: name, phone: phone })
+                .then((data) => {
+                    showPopup('thanks-popup');
+                    console.log(data);
+                });
         })
     });
 

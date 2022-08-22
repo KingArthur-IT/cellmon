@@ -94,15 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             showPopup('thanks-popup');
             
-            // postData('https://k095pa95.ru/getnumbers/webhook.php', { name: name, phone: phone })
-            //     .then((data) => {
-            //         showPopup('thanks-popup');
-            //         console.log(data);
-            //     });
+            postData('https://cellmon.ru/form_worker/index.php', { name: name, phone: phone })
+                .then((data) => {
+                    showPopup('thanks-popup');
+                    console.log(data);
+                });
         })
     });
 
-    document.getElementsByClassName(`contacts__submit`)[0].addEventListener('click', (e) => {
+    document.getElementsByClassName(`contacts__submit`)[0]?.addEventListener('click', (e) => {
         e.preventDefault();
 
         if (document.getElementById('contacts-hidden-input').value != '')
@@ -143,17 +143,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showPopup('thanks-popup');
         
-        // postData('https://k095pa95.ru/getnumbers/webhook.php', { name: name, phone: phone })
-        //     .then((data) => {
-        //         showPopup('thanks-popup');
-        //         console.log(data);
-        //     });
+        postData('https://cellmon.ru/form_worker/index.php', { name: name, phone: phone, email: email, message: message })
+            .then((data) => {
+                showPopup('thanks-popup');
+                console.log(data);
+            });
     });
 
 
     //validate
     ['popup', 'contacts'].forEach((form) => {
-        document.getElementsByClassName(`${form}__name`)[0].addEventListener('input', () => {
+        document.getElementsByClassName(`${form}__name`)[0]?.addEventListener('input', () => {
             document.getElementsByClassName(`${form}__name`)[0].classList.remove('error');
 
             if (document.getElementsByClassName(`${form}__name`)[0].value.length < 3){
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
     ['popup', 'contacts'].forEach((form) => {
-        document.getElementsByClassName(`${form}__tel`)[0].addEventListener('input', () => {
+        document.getElementsByClassName(`${form}__tel`)[0]?.addEventListener('input', () => {
             document.getElementsByClassName(`${form}__tel`)[0].classList.remove('error');
 
             if (document.getElementsByClassName(`${form}__tel`)[0].value.includes('_') || document.getElementsByClassName(`${form}__tel`)[0].value.length === 0){
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         })
     });
-    document.getElementsByClassName(`contacts__email`)[0].addEventListener('input', () => {
+    document.getElementsByClassName(`contacts__email`)[0]?.addEventListener('input', () => {
         document.getElementsByClassName(`contacts__email`)[0].classList.remove('error');
 
         const validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementsByClassName(`contacts__email`)[0].classList.add('error');
         };
     });
-    document.getElementsByClassName(`contacts__message`)[0].addEventListener('input', () => {
+    document.getElementsByClassName(`contacts__message`)[0]?.addEventListener('input', () => {
         document.getElementsByClassName(`contacts__message`)[0].classList.remove('error');
 
         if (document.getElementsByClassName(`contacts__message`)[0].value.length < 10){
