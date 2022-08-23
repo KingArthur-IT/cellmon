@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .?- [S=2]
+RewriteRule ^([A-z0-9]+)/?$ $1.html [L]
+
+# RewriteRule ^(www\.cellmon\.ru)?$ https://cellmon.ru/$1 [R=301,L]
+# RewriteRule ^(www)?$ https://cellmon.ru/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+ErrorDocument 404 https://cellmon.ru/err404/
